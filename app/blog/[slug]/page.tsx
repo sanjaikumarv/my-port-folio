@@ -85,7 +85,7 @@ export default async function Blog({ params }) {
   if (!post) {
     notFound();
   }
-  const [allViews, tweets] = await Promise.all([
+  const [allViews] = await Promise.all([
     getViewsCount(),
     // getTweets(post.tweetIds),
   ]);
