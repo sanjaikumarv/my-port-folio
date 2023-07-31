@@ -1,10 +1,10 @@
 export const workExperienceDatas = [
   {
     cmyExp: "Plenitude IT - Full Stack Developer",
-    date: "Sept 2022 - till date",
+    date: "July 2022 - till date",
   },
   {
-    cmyExp: "Plenitude IT - Interner",
-    date: "July 2022 - Sept 2022",
+    cmyExp: "Freelancer",
+    date: "July 2021 - July 2022",
   },
 ];
