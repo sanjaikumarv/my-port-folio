@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { workExperienceDatas } from "constents";
+import { projects, workExperienceDatas } from "constents";
 import Link from "next/link";
 
 function Badge(props) {
@@ -28,7 +28,7 @@ function ArrowIcon() {
   );
 }
 
-async function BlogLink({
+function BlogLink({
   url,
   name,
   des,
@@ -42,8 +42,8 @@ async function BlogLink({
   des: string;
   date?: string;
   points?: Array<string>;
-  frontEnd?: Array<any>;
-  backEnd?: Array<any>;
+  frontEnd?: Array<{ img: string; name: string }>;
+  backEnd?: Array<{ img: string; name: string }>;
 }) {
   return (
     <a
@@ -115,7 +115,7 @@ export default async function Page() {
 
         <div className='mt-4 dark:prose-invert tracking-wide text-lg text-gray-100'>
           <p>
-            👩‍💻 With 2 years of programming experience and 1+ years of
+            👩‍💻 With 2+ years of programming experience and 1+ years of
             professional work, I'm passionate about exploring new technologies
             🚀 and collaborating with enthusiastic, innovative people 👥. Let's
             build and create together! 🏗️💡
@@ -125,7 +125,9 @@ export default async function Page() {
             <span className='not-prospe'>
               <Badge href='https://www.plenitudeit.com.my/#'>
                 <Image src='/logo.png' width={15} height={15} alt='logo' />
-                <span className='ml-1 tracking-wide text-black-900'>plenitude IT</span>
+                <span className='ml-1 tracking-wide font-semibold text-black-900'>
+                  plenitude IT
+                </span>
               </Badge>
             </span>
             {` must be incredibly fulfilling, given my genuine enthusiasm for JavaScript, optimistic approach, and the opportunity to work extensively with React and Node.js on both front-end and back-end projects, delivering comprehensive and resilient web applications. 🚀🔧💻`}
@@ -271,7 +273,9 @@ function Experience() {
               <p className=' text-xl text-gray-300 font-semibold'>
                 {exp.cmyExp}
               </p>
-              <p className='text-sm mt-1 text-gray-400 font-semibold'>{exp.date}</p>
+              <p className='text-sm mt-1 text-gray-400 font-semibold'>
+                {exp.date}
+              </p>
             </div>
           );
         })}
@@ -287,113 +291,17 @@ function Projects() {
         Projects
       </h1>
       <div className='space-y-8 mt-5'>
-        <BlogLink
-          des='Slot booking is a booking-based application. People can book the multipurpose hall for their events or ceremonies, etc. The hall details and services are shown on the booking page.'
-          name='Slot booking'
-          frontEnd={[
-            { name: "Next JS", img: "/next.png" },
-            { name: "Tailwind CSS", img: "/tailwind.png" },
-          ]}
-          backEnd={[
-            { name: "Node JS", img: "/node.png" },
-            { name: "Express JS", img: "/express.png" },
-            { name: "MongoDB", img: "/mongo.png" },
-          ]}
-          date='November 2022 - July 2023'
-          points={[
-            "Created all UI components with React for all types of form inputs",
-            "Implemented contexts api for authentication and popup models ",
-            "Created all API’s for the hall bookings.",
-            "Nodemailer smtp setup for mail notification",
-            "Twilio sms api setup for otp verification",
-            "Code review and testing",
-          ]}
-          url='https://slot-booking.vercel.app/'
-        />
-        <BlogLink
-          des='Awan BMS was an automated building management application. It created building blocks and assigned each house to an individual owner. The application automatically sent payment links and collected the building owners monthly rent.'
-          name='Awan Bms'
-          frontEnd={[
-            { name: "Next JS", img: "/next.png" },
-            { name: "Tailwind CSS", img: "/tailwind.png" },
-            { name: "StoryBook JS", img: "/storybook.png" },
-          ]}
-          date='November 2022 - May 2023'
-          backEnd={[
-            { name: "Node JS", img: "/node.png" },
-            { name: "Express JS", img: "/express.png" },
-            { name: "MongoDB", img: "/mongo.png" },
-          ]}
-          points={[
-            "Created all UI components with React for all types of form inputs",
-            "Storybook implementation for individual ui components",
-            "Implemented contexts api for authentication and popup models ",
-            "Nodemailer smtp setup for mail notification",
-            "Twilio sms api setup for otp verification",
-            "Code review and testing",
-          ]}
-          url='https://awan.vercel.app/auth/login'
-        />
-        <BlogLink
-          des='Locum Zone was a Malaysian business and doctor employment-focused platform. The platform is used for Malaysian hospitals or medical centers to create their profiles and post their available doctor jobs. Doctors can apply to these jobs.'
-          name='Locum Zone'
-          url='https://locumzone.vercel.app/'
-          frontEnd={[
-            { name: "Next JS", img: "/next.png" },
-            { name: "Tailwind CSS", img: "/tailwind.png" },
-            { name: "StoryBook JS", img: "/storybook.png" },
-          ]}
-          date='July 2022 - November 2022'
-          backEnd={[
-            { name: "Node JS", img: "/node.png" },
-            { name: "Express JS", img: "/express.png" },
-            { name: "MongoDB", img: "/mongo.png" },
-          ]}
-          points={[
-            "Created all UI components with React for all types of form inputs",
-            "Storybook implementation for individual ui components",
-            "Implemented contexts api for authentication.",
-            "Created all API’s for projects.",
-            "Nodemailer smtp setup for mail notification",
-            "Twilio sms api setup for otp verification",
-            "Code review and testing",
-          ]}
-        />
-        <BlogLink
-          des='Tailwood UI is a free Tailwind CSS component library that provides reusable styled components in HTML and Tailwind CSS.'
-          name='Tailwood UI'
-          url='https://tailwoodui.vercel.app/'
-          frontEnd={[
-            { name: "Next JS", img: "/next.png" },
-            { name: "Tailwind CSS", img: "/tailwind.png" },
-            { name: "StoryBook JS", img: "/storybook.png" },
-          ]}
-          date='October 2021 - Jan 2021'
-          points={[
-            "Created all UI components with React and storybook",
-            "Created a Reusable code preview and UI preview components",
-            "Designed complete UI and assets",
-            "Code review and testing",
-          ]}
-        />
-        <BlogLink
-          des='Dev Converter is made for developers. The app provides features like transforming word collections from one case to another and converting JSON to CSV.'
-          name='Dev Converter'
-          url='https://devconverter.vercel.app/login'
-          frontEnd={[
-            { name: "Next JS", img: "/next.png" },
-            { name: "Tailwind CSS", img: "/tailwind.png" },
-            { name: "StoryBook JS", img: "/storybook.png" },
-          ]}
-          date='July 2021 - Aug 2021'
-          points={[
-            "Created all UI components with React and storybook",
-            "Created a Reusable code preview and UI preview components",
-            "Implemented google authentication with firebase",
-            "Designed complete UI and assets",
-            "Code review and testing",
-          ]}
-        />
+        {projects.map((project) => (
+          <BlogLink
+            des={project.des}
+            name={project.name}
+            frontEnd={project.frontEnd}
+            backEnd={project.backEnd}
+            date={project.date}
+            points={project.points}
+            url={project.url}
+          />
+        ))}
       </div>
     </div>
   );
