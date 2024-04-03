@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { projects, workExperienceDatas } from "constents";
+import { projects, skillsImages, workExperienceDatas } from "constents";
 import Link from "next/link";
 
 function Badge(props) {
@@ -76,7 +76,7 @@ function BlogLink({
             <div className='text-gray-200 text-lg font-semibold mt-2'>
               Back End -
               {backEnd.map((f) => (
-                <div className='border ml-2 space-x-2 border-neutral-200 dark:border-neutral-700  bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-200 no-underline'>
+                <div className='border ml-2 space-x-2 border-neutral-200 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-200 no-underline'>
                   <Image
                     src={f.img}
                     width={15}
@@ -115,7 +115,7 @@ export default async function Page() {
 
         <div className='mt-4 dark:prose-invert tracking-wide text-lg text-gray-100'>
           <p>
-            👩‍💻 With 2+ years of programming experience and 1+ years of
+            👩‍💻 With 3 years of programming experience and 1+ years of
             professional work, I'm passionate about exploring new technologies
             🚀 and collaborating with enthusiastic, innovative people 👥. Let's
             build and create together! 🏗️💡
@@ -171,90 +171,19 @@ function Skills() {
         Skills
       </h1>
       <div className='flex flex-wrap max-w-[500px] justify-between'>
-        <Link target='_blank' href='https://www.typescriptlang.org/'>
-          <Image
-            src='/ts.png'
-            className='rounded-full'
-            width={30}
-            height={30}
-            alt='logo'
-          />
-        </Link>
-        <Link target='_blank' href='https://react.dev/'>
-          <Image
-            src='/reactjs.png'
-            className='rounded-full'
-            width={30}
-            height={30}
-            alt='logo'
-          />
-        </Link>
-        <Link target='_blank' href='https://nextjs.org/'>
-          <Image
-            src='/next.png'
-            className='rounded-full text-white'
-            alt='logo'
-            width={30}
-            height={30}
-          />
-        </Link>
-        <Link target='_blank' href='https://storybook.js.org/'>
-          <Image
-            src='/storybook.png'
-            className='rounded-full text-white'
-            alt='logo'
-            width={30}
-            height={30}
-          />
-        </Link>
-        <Link target='_blank' href='https://nodejs.org/en'>
-          <Image
-            src='/node.png'
-            className='rounded-full'
-            width={30}
-            height={30}
-            alt='logo'
-          />
-        </Link>
-        <Link target='_blank' href='https://expressjs.com/'>
-          <Image
-            src='/express.png'
-            className='rounded-full'
-            width={30}
-            height={30}
-            alt='logo'
-          />
-        </Link>
-        <Link target='_blank' href='https://www.mongodb.com/'>
-          <img src='/mongo.png' className='rounded-full w-8 h-8' alt='logo' />
-        </Link>
-        <Link target='_blank' href='https://sass-lang.com/'>
-          <Image
-            src='/sass.png'
-            className='rounded-full'
-            width={30}
-            height={30}
-            alt='logo'
-          />
-        </Link>
-        <Link target='_blank' href='https://tailwindcss.com/'>
-          <Image
-            src='/tailwind.png'
-            className='rounded-full'
-            width={30}
-            height={30}
-            alt='logo'
-          />
-        </Link>
-        <Link target='_blank' href='https://www.figma.com/'>
-          <Image
-            src='/figma.png'
-            className='rounded-full'
-            width={30}
-            height={30}
-            alt='logo'
-          />
-        </Link>
+        {skillsImages.map((skill) => {
+          return (
+            <Link target='_blank' href={skill.url}>
+              <Image
+                src={skill.img}
+                className='rounded-full'
+                width={30}
+                height={30}
+                alt='logo'
+              />
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

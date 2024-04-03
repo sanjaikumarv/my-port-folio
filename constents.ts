@@ -157,3 +157,48 @@ export const projects = [
       ],
   }
 ]
+
+
+
+export const skillsImages = [
+  {
+    url: "https://www.typescriptlang.org/",
+    img: "/ts.png",
+  },
+  {
+    url: "https://react.dev/",
+    img: "/reactjs.png",
+  },
+  {
+    url: "https://nextjs.org/",
+    img: "/next.png",
+  },
+  {
+    url: "https://nodejs.org/en",
+    img: "/node.png",
+  },
+  {
+    url: "https://nestjs.com/",
+    img: "/nestjs.png",
+  },
+  {
+    url: "https://expressjs.com/",
+    img: "/express.png",
+  },
+  {
+    url: "https://www.mongodb.com/",
+    img: "/mongo.png",
+  },
+  {
+    url: "https://sass-lang.com/",
+    img: "/sass.png",
+  },
+  {
+    url: "https://tailwindcss.com/",
+    img: "/tailwind.png",
+  },
+  {
+    url: "https://www.figma.com/",
+    img: "/figma.png",
+  },
+]
