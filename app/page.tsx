@@ -115,7 +115,7 @@ export default async function Page() {
 
         <div className='mt-4 dark:prose-invert tracking-wide text-lg text-gray-100'>
           <p>
-            👩‍💻 With 3 years of programming experience and 1+ years of
+            👩‍💻 With 3+ years of programming experience and 2+ years of
             professional work, I'm passionate about exploring new technologies
             🚀 and collaborating with enthusiastic, innovative people 👥. Let's
             build and create together! 🏗️💡

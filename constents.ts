@@ -11,6 +11,34 @@ export const workExperienceDatas = [
 
 export const projects = [
   {
+    des: 'Mobilab2U is a new on-demand application that matches our willing partners with customers and patients who are looking to take time sensitive medical tests without having to track to hospitals, labs and clinics.',
+    name: 'Mobilab2u Web',
+    frontEnd:
+      [
+        { name: "Next JS", img: "/next.png" },
+        { name: "Tailwind CSS", img: "/tailwind.png" },
+      ],
+    backEnd:
+      [
+        { name: "Node JS", img: "/node.png" },
+        { name: "Fastify", img: "/fastifyimg.png" },
+        { name: "MongoDB", img: "/mongo.png" },
+      ],
+    date: 'July 2024 - Till Date',
+    points:
+      [
+        "Frontend - Next JS.",
+        "Backend - Node JS, MongoDB, Fastify.",
+        "mplemented contexts api for authentication and popup models ",
+        "Created all API’s",
+        "Stripe payment getaway implementation.",
+        "Swagger implementation for api’s documentation",
+        "Nodemailer smtp setup for mail notification",
+        "Code review and testing",
+      ],
+    url: 'https://dev.mobilab2u.com/'
+  },
+  {
     des: 'Ncer Web is a Malaysian business management platform that is being handled by the government. This platform helps the government verify and validate business peoples applications and assists them by providing business ideas.',
     name: 'Ncer Web',
     frontEnd:
@@ -31,7 +59,6 @@ export const projects = [
         "Implemented contexts api for authentication and popup models ",
         "Created all API’s for the hall bookings.",
         "Nodemailer smtp setup for mail notification",
-        // "Twilio sms api setup for otp verification",
         "Code review and testing",
       ],
     url: 'https://nest.ncer.com.my/'
@@ -180,6 +207,10 @@ export const skillsImages = [
   {
     url: "https://nestjs.com/",
     img: "/nestjs.png",
+  },
+  {
+    url: "https://fastify.dev/",
+    img: "/fastifyimg.png",
   },
   {
     url: "https://expressjs.com/",
