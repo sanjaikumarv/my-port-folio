@@ -29,14 +29,14 @@ export const projects = [
       [
         "Frontend - Next JS.",
         "Backend - Node JS, MongoDB, Fastify.",
-        "mplemented contexts api for authentication and popup models ",
+        "Implemented contexts api for authentication and popup models",
         "Created all API’s",
         "Stripe payment getaway implementation.",
         "Swagger implementation for api’s documentation",
-        "Nodemailer smtp setup for mail notification",
+        "Nodemailer smtp setup for email notification",
         "Code review and testing",
       ],
-    url: 'https://dev.mobilab2u.com/'
+    url: 'https://mobilab2u.com/'
   },
   {
     des: 'Ncer Web is a Malaysian business management platform that is being handled by the government. This platform helps the government verify and validate business peoples applications and assists them by providing business ideas.',
@@ -184,8 +184,6 @@ export const projects = [
       ],
   }
 ]
-
-
 
 export const skillsImages = [
   {
