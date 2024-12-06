@@ -35,6 +35,7 @@ export const projects = [
         "Swagger implementation for api’s documentation",
         "Nodemailer smtp setup for email notification",
         "Code review and testing",
+        "CI/CD for pre-production url",
       ],
     url: 'https://mobilab2u.com/'
   },
@@ -52,7 +53,7 @@ export const projects = [
         { name: "Express JS", img: "/express.png" },
         { name: "MongoDB", img: "/mongo.png" },
       ],
-    date: 'September 2023 - Till Date',
+    date: 'September 2023 - November 2024',
     points:
       [
         "Created all UI components with React for all types of form inputs",
@@ -60,6 +61,7 @@ export const projects = [
         "Created all API’s for the hall bookings.",
         "Nodemailer smtp setup for mail notification",
         "Code review and testing",
+        "CI/CD for pre-production url",
       ],
     url: 'https://nest.ncer.com.my/'
   },
