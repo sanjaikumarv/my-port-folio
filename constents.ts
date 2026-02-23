@@ -1,5 +1,9 @@
 export const workExperienceDatas = [
   {
+    cmyExp: "A2M8AI Solutions Pvt Ltd - Full Stack Developer",
+    date: "december 2025 - till now",
+  },
+    {
     cmyExp: "Plenitude IT - Full Stack Developer",
     date: "July 2022 - till date",
   },
